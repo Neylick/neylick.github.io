@@ -8,15 +8,7 @@
 	</head>
 
 	<body>
-		<main>
-
-			<!-- <video controls width="250">
-		
-				<source src="/media/cc0-videos/flower.mp4" type="video/mp4">
-		
-				Video format not supported by this browser. Download <a href="/media/cc0-videos/flower.mp4"> video </a>.
-		</video> -->
-		
+		<main>		
 			<!-- Left bar -->
 			<div class="d-flex flex-column flex-shrink-0 bg-dark" style="width: 4.5rem;">
 				<a href="https://github.com/Neylick" class="d-block p-3 link-dark text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
@@ -68,6 +60,16 @@
 							</svg>
 							Linkedin
 						</a></li>
+
+						
+
+						<li><a class="dropdown-item" href="mailto:nicograveret@gmail.com"> 
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+								<path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+							</svg>
+							nicograveret@gmail.com
+						</a></li>
+
 					</ul>
 				</div>	
 			</div>
@@ -78,12 +80,18 @@
 					<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
 					<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
 					<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+					<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
 				</div>
 				<div class="carousel-inner">
 
 					<a class="carousel-item active" href="https://neylick.itch.io/asteroids">
-						<img width="100%" height="100%" src="media/asteroids_screenshot.png" alt="Asteroids remake" anonymous>
+						<!-- <img width="100%" height="100%" src="media/asteroids_screenshot.png" alt="Asteroids remake" anonymous> -->
 						<!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg> -->
+						<video id="asteroids_video_elem" width="100%" height="100%" src="media/Asteroids.mp4" autoplay loop muted ></video>
+						<script>
+							document.getElementById('asteroids_video_elem').playbackRate = 3.0; //x3
+						</script>
+						
 						<div class="container">
 							<div class="carousel-caption text-start">
 								<h1>Asteroids' remake (Personnal project) </h1>
@@ -125,6 +133,73 @@
 							</div>
 						</div>
 					</div>
+
+					<div style="padding: 5px;" class="carousel-item">
+						<div class="album py-5">
+							<div class="container">
+					
+								<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+									<div class="col">
+										<div class="card shadow-sm">
+											<video width="100%" height="100%" src="media/Opengl Engine.mp4" autoplay loop muted ></video>
+											<div class="card-body">
+												<p class="card-text">
+													<h1> Opengl Engine - Game project (WIP)</h1>
+													<p> This is the start of a working game engine based from opengl in C++.</p>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="card shadow-sm">
+											<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+											<div class="card-body">
+												<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="card shadow-sm">
+											<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+											<div class="card-body">
+												<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+											</div>
+										</div>
+									</div>
+
+					
+									<div class="col">
+										<div class="card shadow-sm">
+											<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+											<div class="card-body">
+												<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="col">
+										<div class="card shadow-sm">
+											<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+											<div class="card-body">
+												<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="col">
+										<div class="card shadow-sm">
+											<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+											<div class="card-body">
+												<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 
 				<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">

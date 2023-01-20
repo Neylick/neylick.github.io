@@ -8,4 +8,10 @@ main
 #myCarousel
 {
 	background-color: black;
+	/* color: white; */
+}
+
+.card-text, .card-text h1, .card-text p
+{
+	color: black;
 }
