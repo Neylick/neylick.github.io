@@ -4,3 +4,8 @@ main
 	grid-template-columns: min-content auto;
 	height: 100%;
 }
+
+#myCarousel
+{
+	background-color: black;
+}
