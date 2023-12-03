@@ -1,17 +1,246 @@
-main
+@font-face {
+	font-family: 'IllusionSerif';
+	src: url('fonts/IllusionSerif-Regular.ttf') format('ttf');
+}
+
+--root
+{
+	/* japanese-colors from https://twitter.com/nuevo_tokyo/status/1703574984982163940/photo/1*/
+	--neo-purple: #180614;
+	--neo-white: #f3f3f2;
+	--neo-grey: #2b2b2b;
+	--neo-brown: #281a14;
+	--neo-black: #16160e;
+
+	--primary: var(--neo-purple);
+	--secondary: var(--neo-black);
+	/* --color-scheme: dark; */
+}
+
+.main
+{
+	/* background-color: black; */
+	height: 100%;
+	width: 100%;
+	background-color: #2b2b2b;
+	color: #f8fbf8; 
+}
+
+.main *
+{
+	/* background-color: #2b2b2b; */
+	z-index: 0!important;
+	color: #f8fbf8; 
+}
+
+.main_content_container
+{
+	padding-left: 4.5rem;
+	padding-top: 1rem;
+	background-color: #2b2b2b;
+	/* background-color: #887f7a; */
+	color: #f8fbf8; 
+	text-align: center;
+	height: min-content;
+}
+
+.header
+{
+	display: inline-block;
+	border: 3px solid #887f7a;
+	/* border-radius: 10%; */
+	font-family: 'IllusionSerif';
+	/* border-radius: 3rem; */
+}
+
+.popup, 
+.popup *
+{
+	z-index: 1!important;
+	color: #2b2b2b!important;
+}
+
+.main_title
+{
+	padding: 5rem;
+	padding-bottom: 0;
+	/* color: var(--neo-white); */
+	
+	/* font-size: larger; */
+	text-align: center;
+	line-height: 2;
+}
+
+.main_presentation
+{
+	padding: 1rem;
+	text-align: center;
+	line-height: 2;
+	
+}
+
+.sidebar
+{
+	/* color: var(--primary)!important; */
+	border: 3px solid #887f7a;
+	position: fixed;
+	height: 100%;
+	/* width: min-content; */
+	width: 4.5rem;
+	/* accent-color: purple; */
+	/* background: linear-gradient(#180614, #A6A5C4)!important; */
+	background: #2b2b2b!important;
+}
+
+.sidebar *
+{
+	color: #f8fbf8; 
+	/* background-color: ; */
+}
+
+
+.profile_pic *
+{
+	
+	padding: 5px;
+	border-radius: 40%;
+	/* border: 3px solid #887f7a; */
+}
+
+.nav-link.active
+{
+	background-color: #4d80e6!important;
+}
+
+.grid-container
 {
 	display: grid;
-	grid-template-columns: min-content auto;
+	grid-template-columns: repeat(3, minmax(150px, 1fr));
+	gap: 1rem;
+	padding: 1rem;
+	/* padding-left: 2rem; */
+}
+
+.grid-container item 
+{
+	z-index: 11;
+	position: relative;
+	display: inline-block;
+	object-fit: cover;
+	aspect-ratio: 1/1;
+
+	transition: scale 350ms ease-in-out;
+}
+
+.grid-container item.w2span
+{
+	grid-column: span 2;
+	aspect-ratio: 2/1;
+}
+
+.grid-container item img, 
+.grid-container item video
+{
+	display: block;
+	object-fit: cover;
+	aspect-ratio: 4/3;
+	width: 100%;
 	height: 100%;
+	cursor:pointer;
+	border-radius: 2%;
 }
 
-#myCarousel
+item:hover .overlay-text
 {
-	background-color: black;
-	/* color: white; */
+	display: flex;
+	flex-direction: column;
+
+	opacity: 1;
+	transform: translate(0, 0);
+	color: #f8fbf8;
+	
+	background-color: rgba( 0,0,0, 0.6);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-overflow: clip;
+	border-radius: 2%;
+
+	transition: opacity .6s ease-in-out;
+	transition: transform .6s ease-in-out;
+	transition: height .6s ease-in-out;
+	padding: 5%;
 }
 
-.card-text, .card-text h1, .card-text p
+item:hover .overlay-text *
 {
-	color: black;
+	position: relative;
+	width: auto;
+	height: auto;
+	opacity: 1;
+	transform: translate(0,0);
+	transition: translate 0 ease;
+}
+
+item:hover .overlay-text h1
+{
+	font-size: large;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+item:hover .overlay-text p
+{
+	font-size: medium;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+h1::-webkit-scrollbar,
+p::-webkit-scrollbar 
+{
+  display: none;
+}
+
+.overlay-text,
+.overlay-text *
+{
+	font-size: 1%;
+	/* position: absolute;
+	top: 0;
+	left: 0; */
+	width: 0px;
+	height: 0px;
+	opacity: 0;
+	/* font-size: 0; */
+	transform: translate(0, 100%);
+
+	transition: height 0.1 ease-in-out;
+}
+
+/* .overlay-icons
+{
+	display: inline-block;
+	position: absolute;
+	background-color: rgba( 0,0,0, 0.8);
+	text-align: right;
+	top: 0;
+	right: 0;
+	width: min-content;
+	height: min-content;
+	border-radius: 10px;
+	padding: 3px;
+} */
+
+/* .overlay-icons *
+{
+	color: #4d80e6!important;
+} */
+
+.grid-container:has(item:hover) > item:not(:hover)
+{
+	scale: .9;
+	/* opacity: .9; */
 }
