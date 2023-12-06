@@ -139,6 +139,7 @@
 	grid-template-columns: 1fr 1fr 1fr;
 	text-align: left;
 	gap: .5rem;
+	width: 100%;
 }
 
 @media screen and (max-width: 1200px)
@@ -155,7 +156,7 @@
 {
 	.resume
 	{
-		grid-template-columns: 1fr;
+		display: inline-block;
 	}
 }
 
