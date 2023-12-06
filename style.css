@@ -2,7 +2,9 @@
 {
 	font-family: 'IllusionSerif';
 	src: 	url('fonts/IllusionSerif-Regular.ttf') format('ttf'),
-				url('fonts/IllusionSerif-Regular.otf') format('otf');
+				url('fonts/IllusionSerif-Regular.woff') format('woff'),
+				url('fonts/IllusionSerif-Regular.woff2') format('woff2'),
+			 	url('fonts/IllusionSerif-Regular.otf') format('otf');
 }
 
 --root

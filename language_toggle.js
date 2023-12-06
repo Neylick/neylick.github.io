@@ -68,4 +68,4 @@ document.getElementById('lang-button').addEventListener('click', toggleLanguage)
 
 const l = getCookie('language');
 if(l === 'fr') set_lang_fr();
-else if(l === 'en') set_lang_en();
+else set_lang_en();
