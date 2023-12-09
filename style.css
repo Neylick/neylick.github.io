@@ -291,6 +291,7 @@ h1, h2, h3, h4
 }
 
 .grid-container item img, 
+.grid-container item iframe,
 .grid-container item video
 {
 	display: block;
