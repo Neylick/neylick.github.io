@@ -10,10 +10,10 @@
 }
 
 /* retro font */
-@font-face 
+@font-face
 {
-	font-family: 'AntiqueOliveStdCompact';
-	src: 	url('fonts/Antique-Olive-Std-Compact_3864.ttf');
+	font-family: AlteHaasGrotesk;
+	src: url('fonts/AlteHaasGroteskBold.ttf')
 }
 
 /* SCP / Regular / Pro font */
@@ -308,7 +308,7 @@ main *
 	grid-template-columns: 1fr 1fr;
 	
 	padding-top: 2vw;
-	padding-bottom: 2vw;
+	/* padding-bottom: 2vw; */
 	padding-right: 4vw;
 	padding-left: 4vw;
 
@@ -425,8 +425,10 @@ main *
 
 h1, h2, h3, h4
 {
-	font-family: 'AntiqueOliveStdCompact'; 
-	/* line-height: 2; */
+	/* font-family: 'AntiqueOliveStdCompact';  */
+	font-family: 'AlteHaasGrotesk';
+	/* font-family: 'Cocogoose'; */
+	line-height: 2;
 	/* padding: 1rem; */
 	/* display: inline-block; */
 	line-height: 1.2em;
