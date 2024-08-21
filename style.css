@@ -1,7 +1,7 @@
 
 /* pixel font */
 @font-face 
-{
+{ 
 	font-family: 'IllusionSerif';
 	src: 	url('fonts/IllusionSerif-Regular.ttf') format('ttf'),
 				url('fonts/IllusionSerif-Regular.woff') format('woff'),
