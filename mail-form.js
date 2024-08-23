@@ -59,11 +59,13 @@ function on_form_loaded()
     var formData = getFormData(form);
     var data = formData.data;
 
+		// Do not send if email/message is empty.
+    if (!formData.data['email'] || !formData.data['message']) return false;
+		if (!formData.data['email'].includes('@')) return false;
     // If a honeypot field is filled, assume it was done so by a spam bot.
-    if (formData.honeypot) return false;
+		if (formData.honeypot) return false;
 
     disableAllButtons(form);
-
 		console.log('Disabled all buttons');
 
     var url = form.action;
